@@ -2,14 +2,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Mr+Dafoe&display=swap");
 
 :root {
-  --gridGradient: transparent 65%, oklch(30% 0.1 290) 75%, oklch(65% 0.2 15) 80%,
-    oklch(30% 0.1 290) 85%, transparent 95%;
+  /* Replace oklch colors with more widely supported color formats */
+  --gridGradient: transparent 65%, rgba(255, 0, 0, 0.75) 75%, rgba(0, 255, 0, 0.8) 80%, rgba(255, 0, 0, 0.75) 85%, transparent 95%;
 }
 
 body {
   font-size: clamp(1rem, 2vw, 2rem);
-  background: radial-gradient(oklch(66% 0.25 15 / 50%) 0%, transparent 75%),
-    linear-gradient(oklch(25% 0.085 295) 40%, oklch(15% 0.065 295) 70%);
+  background: radial-gradient(rgba(255, 165, 0, 0.5) 0%, transparent 75%),
+    linear-gradient(rgba(0, 0, 255, 0.4) 40%, rgba(0, 128, 0, 0.35) 70%);
   perspective: 600px;
   overflow: hidden;
 }
@@ -30,14 +30,9 @@ body {
   position: fixed;
   width: 100vw;
   height: 3em;
-  background: linear-gradient(
-    oklch(75% 0.13 230 / 0.2) 20%,
-    oklch(80% 0.135 200) 40%,
-    oklch(70% 0.1 200) 60%,
-    oklch(75% 0.13 230 / 0.2) 80%
-  );
+  background: linear-gradient(rgba(173, 216, 230, 0.2) 20%, rgba(135, 206, 250, 0.4) 40%, rgba(0, 191, 255, 0.6) 60%, rgba(173, 216, 230, 0.2) 80%);
   background-size: 1px 0.5em;
-  box-shadow: 0 0 2em oklch(90% 0.15 195 / 0.33);
+  box-shadow: 0 0 2em rgba(30, 144, 255, 0.33);
   transform: translateY(-50%);
   left: 0;
 }
@@ -52,20 +47,20 @@ h1 {
 }
 h1 span:first-child {
   display: block;
-  text-shadow: 0 0 0.1em oklch(92% 0.1 197.5), 0 0 5em oklch(95% 0.02 90);
-  -webkit-text-stroke: 0.06em oklch(20% 0.1 295 / 0.75);
+  text-shadow: 0 0 0.1em rgba(255, 255, 255, 0.9), 0 0 5em rgba(255, 255, 0, 0.9);
+  -webkit-text-stroke: 0.06em rgba(0, 0, 128, 0.75);
 }
 h1 span:last-child {
   position: absolute;
   left: 0;
   top: 0;
   background-image: linear-gradient(
-    oklch(45% 0.225 285) 20%,
-    oklch(85% 0.135 197.5) 35%,
-    oklch(95% 0.02 90) 50%,
-    oklch(25% 0.1 295) 50%,
-    oklch(55% 0.22 357) 60%,
-    oklch(65% 0.2 15) 75%
+    rgba(255, 0, 0, 0.85) 20%,
+    rgba(0, 255, 0, 0.85) 35%,
+    rgba(0, 0, 255, 0.9) 50%,
+    rgba(255, 0, 0, 0.85) 50%,
+    rgba(0, 255, 255, 0.88) 60%,
+    rgba(255, 165, 0, 0.75) 75%
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -73,10 +68,11 @@ h1 span:last-child {
 
 h2 {
   margin-top: -0.8em;
-  color: oklch(95% 0.02 90);
+  color: rgba(255, 255, 0, 0.9);
   font-family: "Mr Dafoe";
   font-size: 5em;
-  text-shadow: 0 0 0.05em oklch(98% 0 0), 0 0 0.2em oklch(65% 0.265 351),
-    0 0 0.3em oklch(60% 0.25 345);
+  text-shadow: 0 0 0.05em rgba(255, 255, 255, 0.98), 0 0 0.2em rgba(255, 0, 0, 0.85), 0 0 0.3em rgba(255, 69, 0, 0.85);
   transform: rotate(-7deg);
+  /* Adjust the position of h2 */
+  margin-left: 10%;
 }
